@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="mythical cards logo.png" alt="Game Logo" class="logo">
+            <h1 class="game-name">Mythic Decks! alpha version 1.6</h1>
+        </div>
+
+        <div class="profile-container">
+            <h2>Profile</h2>
+            <div id="profile-header">
+                <p>Username: <span id="username">Player1</span></p>
+            </div>
+            <div class="profile-stats">
+                <div>Level: <span id="level">1</span></div>
+                <div>Experience Points: <span id="xp">0</span></div>
+                <div>Total Earnings: $<span id="total-earnings">0</span></div>
+            </div>
+            <button id="edit-profile-btn">Edit Profile</button>
+        </div>
+
+        <div class="card-select-container">
+            <select id="card-select">
+                <!-- Options will be added dynamically -->
+            </select>
+        </div>
+
+        <div class="card-info-container">
+            <img id="card-image" src="" alt="Card Image">
+            <div id="card-display">
+                <!-- Card information will be dynamically added here -->
+            </div>
+            <div>
+                <p id="selected-item-info">Selected Card:</p>
+                <p id="selected-item-name"></p>
+                <p id="selected-item-price"></p>
+            </div>
+        </div>
+
+        <div class="transaction-container">
+            <button id="perform-transaction">Perform Transaction</button>
+            <button id="refresh-market">Refresh Market</button>
+            <button id="buy-all-button">Buy All</button>
+            
+        <div class="quantity-container">
+            <input type="number" id="card-quantity-input" min="1" value="1">
+            <button id="buy-quantity-button">Buy Quantity</button>
+        </div>
+        </div>
+
+        <div class="balance-container">
+            <h2>Balance</h2>
+            <p id="balance-amount">100</p>
+        </div>
+        
+        <div class="inventory-container">
+            <h2>Inventory</h2>
+            <button id="sell-all-button">Sell All</button>
+            <button id="sell-all-rares-button">Sell All Rares</button>
+            <button id="sell-all-super-rares-button">Sell All Super Rares</button>
+            <button id="sell-all-epics-button">Sell All Epics</button>
+            <button id="sell-all-mythics-button">Sell All Mythics</button>
+            <!-- Inventory list -->
+            <ul id="inventory-list">
+                <!-- Inventory items will be dynamically added here -->
+            </ul>
+        </div>
+
+        <div id="notification" class="notification">Market Refreshed!</div>
+
+        <div id="shop">
+            <h2>Shop</h2>
+            <button id="buy-tag-btn">Buy Millionaire Tag (1,000,000$)</button>
+            <div id="pack-opening-container">
+                <div id="shop">
+                    <button class="pack-btn" data-pack="rare">Rare Pack<span class="pack-price">50$</span></button>
+                    <button class="pack-btn" data-pack="super_rare">Super Rare Pack<span class="pack-price">250$</span></button>
+                    <button class="pack-btn" data-pack="epic">Epic Pack<span class="pack-price">1000$</span></button>
+                </div>
+                <div id="cards-container"></div>
+            </div>
+        </div>
+
+        <div class="tag-container">
+            <h2>Tags</h2>
+            <ul id="tags-list"></ul>
+        </div>
+
+        <div class="achievements-container">
+            <h2>Achievements</h2>
+            <ul id="achievements-list">
+                <!-- Achievements will be dynamically added here -->
+            </ul>
+        </div>
+        
+        <div class="achievements-progress-container">
+            <h2>Achievement Progress</h2>
+            <ul id="achievements-progress-list">
+                <!-- Achievement progress will be dynamically added here -->
+            </ul>
+        </div>
+
+        <table>
+            <tr>
+                <td>Rarity</td>
+                <td>min value</td>
+                <td>max value</td>
+            </tr>
+            <tr>
+                <td>Rare</td>
+                <td>5$</td>
+                <td>20$</td>
+            </tr>
+            <tr>
+                <td>Super Rare</td>
+                <td>25$</td>
+                <td>45$</td>
+            </tr>
+            <tr>
+                <td>Epic</td>
+                <td>50$</td>
+                <td>150$</td>
+            </tr>
+            <tr>
+                <td>Mythic</td>
+                <td>200$</td>
+                <td>450$</td>
+            </tr>
+            <tr>
+                <td>Legendary</td>
+                <td>500$</td>
+                <td>1000$</td>
+            </tr>
+            <tr>
+                <td>Dev</td>
+                <td>100000$</td>
+                <td>1000000$</td>
+            </tr>
+        </table>
+
+        <div class="discord-container">
+            <button id="tutorial-btn" class="tutorial-btn">Tutorial</button>
+            <button id="discord-btn" class="discord-btn">Join our Discord Server</button>
+        </div>
+
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Achievements Section */
+.achievements-container {
+    margin-top: 20px;
+}
+
+#achievements-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.achievement-item.unlocked {
+    background-color: #c8e6c9; /* Light green background for unlocked achievements */
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Achievement Grid */
+#achievement-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.achievement-icon.unlocked {
+    background-color: #4CAF50;
+}
+
+.achievement-info {
+    flex: 1;
+}
+
+.achievement h2 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.achievement p {
+    margin: 0;
+    color: #666;
+}
+
+/* Card Selection Section */
+.card-select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-select-container select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Card Info Section */
+.card-info-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-info-container img {
+    max-width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.card-info-container p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Transaction Section */
+.transaction-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.transaction-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.transaction-container button:hover {
+    background-color: #45a049;
+}
+
+/* Inventory Section */
+.inventory-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inventory-container li {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Balance Section */
+.balance-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.balance-container p {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Notification Section */
+.notification {
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styles */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* Shop Section */
+#shop {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pack-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+}
+
+.pack-price {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Cards Container */
+#cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card.rare {
+    border-color: blue;
+}
+
+.card.epic {
+    border-color: purple;
+}
+
+.card.legendary {
+    border-color: gold;
+}
+#shop button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+.discord-btn {
+    background-color: #5865F2; /* Discord's official color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.discord-btn:hover {
+    background-color: #4752c4; /* Slightly darker shade */
+}
+#tutorial-btn {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.tutorial-btn {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tutorial-btn:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+.header {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.header h1 {
+    margin: 0;
+}
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+}
+.profile-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile-header h2 {
+    margin: 0;
+}
+.profile-stats {
+    margin-top: 20px;
+}
+.profile-stats div {
+    margin-bottom: 10px;
+}
+.nav-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust spacing between logo and game name */
+}
+h1 {
+    margin: 0;
+    font-size: 36px; /* Adjust as needed */
+}
+
+.game-name {
+    margin: 0; /* Remove default margin */
+}
