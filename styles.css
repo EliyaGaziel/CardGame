@@ -1,89 +1,208 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a;
+    color: #f1f1f1;
     margin: 0;
     padding: 0;
 }
 
-/* Achievements Section */
-.achievements-container {
-    margin-top: 20px;
+/* Header */
+.header {
+    background: linear-gradient(135deg, #ff6f61, #d63b6e);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #d63b6e;
 }
 
-#achievements-list {
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.game-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Profile Container */
+.profile-container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin: 20px 0;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    border: 4px solid #d63b6e;
+}
+
+.profile-stats div {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Card Selection and Info */
+.card-select-container, .card-info-container {
+    margin-bottom: 20px;
+}
+
+.card-info-container {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-info-container img {
+    border-radius: 10px;
+}
+
+/* Transaction and Balance */
+.transaction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.transaction-container button {
+    background-color: #e60000; /* More intense red */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.transaction-container button:hover {
+    background-color: #b30000; /* Darker red */
+}
+
+.balance-container {
+    text-align: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Inventory */
+.inventory-container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.inventory-container button {
+    background-color: #e60000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inventory-container button:hover {
+    background-color: #b30000;
+}
+
+/* Shop Section */
+#shop {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pack-btn {
+    background: linear-gradient(135deg, #e60000, #b30000); /* More intense red gradient */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+.pack-btn:hover {
+    background: linear-gradient(135deg, #b30000, #e60000); /* Darker red gradient */
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Achievements and Progress */
+.achievements-container, .achievements-progress-container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#achievements-list, #achievements-progress-list {
     list-style-type: none;
     padding: 0;
 }
 
-.achievement-item {
+.achievement-item, .progress-item {
+    background-color: #444;
+    border-radius: 8px;
+    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
 }
 
-.achievement-item.unlocked {
-    background-color: #c8e6c9; /* Light green background for unlocked achievements */
-}
-
-/* Main Container */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
+/* Discord and Tutorial Buttons */
+.discord-btn, #tutorial-btn {
+    background-color: #8400ff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
+.discord-btn:hover, #tutorial-btn:hover {
+    background-color: #ff0000;
 }
-
-/* Achievement Grid */
-#achievement-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.achievement {
+/* Cards Container */
+#cards-container {
     display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s;
+    position: relative;
 }
-
-.achievement-icon {
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.achievement-icon.unlocked {
-    background-color: #4CAF50;
-}
-
-.achievement-info {
-    flex: 1;
-}
-
-.achievement h2 {
-    margin: 0 0 5px 0;
-    color: #333;
-}
-
-.achievement p {
-    margin: 0;
-    color: #666;
-}
-
-/* Card Selection Section */
 .card-select-container {
     display: flex;
     justify-content: space-between;
@@ -116,125 +235,6 @@ h1 {
     color: #333;
 }
 
-/* Transaction Section */
-.transaction-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.transaction-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.transaction-container button:hover {
-    background-color: #45a049;
-}
-
-/* Inventory Section */
-.inventory-container ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.inventory-container li {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-/* Balance Section */
-.balance-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.balance-container p {
-    font-size: 20px;
-    color: #333;
-}
-
-/* Notification Section */
-.notification {
-    display: none;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-/* Button Styles */
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Table Styles */
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-/* Shop Section */
-#shop {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.pack-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-    display: inline-block;
-}
-
-.pack-price {
-    display: block;
-    margin-top: 5px;
-    font-size: 14px;
-    color: #666;
-}
-
-/* Cards Container */
-#cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 100px;
-    height: 150px;
-    border: 2px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    transition: transform 0.3s;
-    position: relative;
-}
-
 .card img {
     width: 100%;
     height: auto;
@@ -255,92 +255,72 @@ table, th, td {
 .card.legendary {
     border-color: gold;
 }
-#shop button {
-    padding: 10px;
-    margin: 5px;
-    font-size: 16px;
-}
-.discord-btn {
-    background-color: #5865F2; /* Discord's official color */
-    color: white;
+#buy-tag-btn {
+    background-color: #e60000; /* More intense red */
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.discord-btn:hover {
-    background-color: #4752c4; /* Slightly darker shade */
-}
-#tutorial-btn {
-    padding: 10px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.tutorial-btn {
-    background-color: #4CAF50; /* Green color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.tutorial-btn:hover {
-    background-color: #45a049; /* Slightly darker green */
-}
-.header {
-    display: flex;
-    align-items: center; /* Align items vertically */
-}
-.header h1 {
-    margin: 0;
-}
-.profile-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-}
-.profile-header {
-    display: flex;
-    align-items: center;
-}
-.profile-header img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-.profile-header h2 {
-    margin: 0;
-}
-.profile-stats {
-    margin-top: 20px;
-}
-.profile-stats div {
-    margin-bottom: 10px;
-}
-.nav-button {
-    margin: 10px 0;
+    color: #fff;
     padding: 10px 20px;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-}
-.logo {
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Adjust spacing between logo and game name */
-}
-h1 {
-    margin: 0;
-    font-size: 36px; /* Adjust as needed */
+    transition: background-color 0.3s;
 }
 
-.game-name {
-    margin: 0; /* Remove default margin */
+#buy-tag-btn:hover {
+    background-color: #b30000; /* Darker red */
 }
+#edit-profile-btn {
+    background-color: #e60000; /* More intense red */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#edit-profile-btn:hover {
+    background-color: #b30000; /* Darker red */
+}
+#card-select {
+    background-color: #e60000; /* More intense red */
+    color: #fff;
+    border: 1px solid #b30000; /* Darker red border */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#card-select:hover {
+    background-color: #b30000; /* Darker red */
+    border-color: #800000; /* Even darker red border */
+}
+#selected-item-info,
+#selected-item-name,
+#selected-item-price {
+    color: #fff; /* White color */
+}
+
+/* Initial state for notification */
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Notification visible state */
+.notification.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+
